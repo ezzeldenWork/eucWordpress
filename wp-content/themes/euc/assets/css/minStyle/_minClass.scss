@@ -1,0 +1,41 @@
+.overlay {
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.26);
+  position: fixed;
+  z-index: 99;
+  display: none;
+}
+
+.prag-sm {
+  font-weight: 400;
+  font-size: 18px;
+  color: $color-gray;
+}
+.prag {
+  font-weight: 400;
+  font-size: 24px;
+  color: $color-gray;
+  &.sm-prag {
+    font-size: 18px;
+  }
+}
+.section-padding {
+  padding: 40px 0;
+}
+.section-margin {
+  margin: 40px 0;
+}
+
+.back-section {
+  background-color: rgba($color-secondary, 0.22);
+}
+@include media(992) {
+  .prag {
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-gray;
+    &.sm-prag {
+      font-size: 14px;
+    }
+  }
+}

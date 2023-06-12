@@ -1,0 +1,93 @@
+.feedback-section {
+  .feedback-slider {
+    .feedback-slider-item {
+      border-radius: 4px;
+      padding: 12px;
+      background-color: $color-white;
+      width: calc(100% - 12px) !important;
+      margin-bottom: 24px;
+      @include after("") {
+        transform: rotate(95deg);
+        transition: inherit;
+        position: absolute;
+        z-index: -1;
+        bottom: -31px;
+        left: 48px;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(136, 183, 213, 0);
+        border-bottom-color: rgba($color-white, 1);
+        border-width: 34px;
+        margin-left: -17px;
+      }
+      .feedback-slider-item-img-name-box {
+        display: flex;
+        align-items: center;
+        img {
+          object-fit: cover;
+          height: 76px;
+          aspect-ratio: 1;
+          border-radius: 4px;
+        }
+        .name-box {
+          padding: 0 12px;
+          .name {
+            font-weight: 600;
+            font-size: 24px;
+            color: $color-gray-dark;
+          }
+          .job {
+            font-weight: 500;
+            font-size: 20px;
+            color: rgba($color-gray-dark, 0.7);
+          }
+        }
+      }
+      .content {
+        padding-top: 8px;
+        .prag {
+          font-weight: 400;
+          font-size: 16px;
+          color: rgba($color-gray-dark, 0.7);
+        }
+      }
+    }
+  }
+}
+
+.slick-dots {
+  li {
+    opacity: 1;
+    @include trans(0.2);
+    width: 8px;
+    height: 8px;
+    &.slick-active {
+      width: 20px;
+      button {
+        width: 20px;
+        &:before {
+          width: 20px;
+          background-color: rgba($color-secondary, 1);
+        }
+      }
+    }
+    button {
+      opacity: 1;
+      @include trans(0.2);
+      width: 8px;
+      height: 8px;
+      &:before {
+        opacity: 1;
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 20px;
+        background-color: rgba($color-white, 1);
+        @include trans(0.2);
+      }
+    }
+  }
+}

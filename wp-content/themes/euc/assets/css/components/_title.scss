@@ -1,0 +1,25 @@
+.section-title-box {
+  margin-bottom: 24px;
+  text-align: center;
+  .sub-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: $color-primary;
+  }
+  .section-title {
+    font-weight: 600;
+    font-size: 32px;
+    color: $color-black;
+  }
+}
+
+@include media(992) {
+  .section-title-box {
+    .sub-title {
+      font-size: 14px;
+    }
+    .section-title {
+      font-size: 22px;
+    }
+  }
+}

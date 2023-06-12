@@ -1,0 +1,10 @@
+@mixin after($content: "") {
+  position: relative;
+  z-index: 1;
+  &::after {
+    transition: inherit;
+    position: absolute;
+    content: "#{$content}";
+    @content;
+  }
+}

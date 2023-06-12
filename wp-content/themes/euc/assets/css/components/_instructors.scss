@@ -1,0 +1,43 @@
+.instructors-box {
+  .img-box {
+    img {
+      width: 100%;
+      height: 328px;
+      object-fit: cover;
+      border-radius: 200px 200px 0 0;
+    }
+  }
+  .content-box {
+    text-align: center;
+    padding: 12px 0 0;
+    .instructors-name {
+      font-weight: 600;
+      font-size: 24px;
+      color: $color-gray-dark;
+    }
+    .job-name {
+      padding: 4px 0 0;
+      font-weight: 500;
+      font-size: 20px;
+      color: rgba($color-gray-dark, 0.7);
+    }
+  }
+}
+
+@include media(772) {
+  .instructors-box {
+    .img-box {
+      img {
+        height: 239px;
+      }
+    }
+    .content-box {
+      .instructors-name {
+        font-size: 17px;
+      }
+      .job-name {
+        font-size: 11px;
+      }
+    }
+  }
+}

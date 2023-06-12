@@ -1,0 +1,37 @@
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: unset;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #f1f1f1;
+  // @include dir(rtl) {
+  // }
+  @include dir(ltr) {
+    font-family: "Poppins", sans-serif;
+  }
+}
+@include media(772) {
+  .order-first-custom {
+    order: -1;
+  }
+}

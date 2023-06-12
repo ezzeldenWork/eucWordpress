@@ -1,0 +1,31 @@
+.button-box {
+  a {
+    overflow: hidden;
+    padding: 13px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+
+    color: $color-white;
+    display: inline-block;
+    @include after("") {
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        266.28deg,
+        rgba(226, 24, 24, 0.71) 2.19%,
+        rgba(69, 135, 239, 0.71) 95.46%
+      );
+    }
+    @include hover(0.2) {
+      transform: translate(2px, 2px);
+    }
+  }
+}
+@include media(992) {
+  .button-box {
+    a {
+      font-size: 14px;
+      padding: 8px 20px;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.header-section {
+  padding: 12px 0;
+  .home & {
+    background-color: rgba($color-secondary, 0.04);
+  }
+  .nav-box {
+    .close-icon {
+      display: none;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li {
+        padding: 0 12px;
+        a {
+          font-weight: 600;
+          font-size: 20px;
+          color: $color-secondary;
+          padding: 0 0 4px;
+          @include after("") {
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: $color-secondary;
+            @include dir(rtl) {
+              right: 0;
+            }
+            @include dir(ltr) {
+              left: 0;
+            }
+          }
+          @include hover(0.2) {
+            color: $color-primary;
+            &:after {
+              width: 100%;
+              background-color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  .right-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .open-icon {
+      display: none;
+    }
+  }
+}
+
+@include media(992) {
+  .header-section {
+    .nav-box {
+      ul {
+        li {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media(992) {
+  .header-section {
+    .right-box {
+      .open-icon {
+        display: block;
+        margin: 0 24px;
+        i {
+          font-size: 22px;
+          cursor: pointer;
+          color: rgba($color-primary, 1);
+        }
+      }
+    }
+    .nav-box {
+      padding: 60px 30px 40px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 240px;
+      z-index: 99999;
+      background-color: rgba($color-secondary, 1);
+      @include trans(0.4);
+      @include dir(rtl) {
+        right: -300px;
+        &.open-menu {
+          right: 0;
+        }
+      }
+      @include dir(ltr) {
+        left: -300px;
+        &.open-menu {
+          left: 0;
+        }
+      }
+      .close-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+        i {
+          font-size: 22px;
+          cursor: pointer;
+          color: rgba($color-white, 1);
+        }
+      }
+      ul {
+        display: block;
+        li {
+          margin-bottom: 12px;
+          a {
+            color: rgba($color-white, 1);
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

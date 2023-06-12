@@ -1,0 +1,26 @@
+.social_media_list {
+  display: flex;
+  align-items: center;
+  li {
+    @include dir(rtl) {
+      padding-left: 12px;
+    }
+    @include dir(ltr) {
+      padding-right: 12px;
+    }
+    a {
+      display: grid;
+      place-content: center;
+      width: 35px;
+      font-size: 18px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: $color-white;
+      color: $color-secondary;
+      @include hover(0.2) {
+        color: $color-white;
+        background-color: $color-secondary;
+      }
+    }
+  }
+}
